@@ -20,6 +20,7 @@ defmodule AppStore.API.TestNotification do
 
   @doc """
   Get the status of a test notification.
+
   Official documentation: https://developer.apple.com/documentation/appstoreserverapi/get-test-notification-status
   """
   @spec get_test_notification_status(Config.t(), String.t(), String.t()) ::
