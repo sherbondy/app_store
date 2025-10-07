@@ -26,7 +26,7 @@ defmodule AppStore.API.TestNotificationTest do
 
   describe "get_test_notification_status/3" do
     test "gets the status of a test notification", %{bypass: bypass, app_store: app_store} do
-      expected_body = ""
+      expected_body = %{signedPayload: "signed_payload_value"} |> Jason.encode!()
 
       Bypass.expect_once(bypass, "GET", "/inApps/v1/notifications/test/notification_id", fn conn ->
         conn
