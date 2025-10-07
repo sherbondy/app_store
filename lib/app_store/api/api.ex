@@ -30,4 +30,7 @@ defmodule AppStore.API do
 
   defdelegate send_test_notification(api_config, body),
     to: TestNotification
+
+  defdelegate get_test_notification_status(api_config, token, test_notification_token),
+    to: TestNotification
 end
